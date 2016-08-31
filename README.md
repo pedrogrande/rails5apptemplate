@@ -16,13 +16,13 @@ It includes authentication, authorization and bootstrap styling.
 
 ## Included Gems
 
-- [Devise](https://github.com/plataformatec/devise)
-- [Simple Form](https://github.com/plataformatec/simple_form)
-- [Cancancan](https://github.com/CanCanCommunity/cancancan)
-- [Rolify](https://github.com/RolifyCommunity/rolify)
-- [Bootstrap-Sass](Bootstrap v3)](https://github.com/twbs/bootstrap-sass)
-- [Fontawesome-sass](https://github.com/FortAwesome/font-awesome-sass)
-- Rails_12factor in a production group (for Heroku).
+- [devise](https://github.com/plataformatec/devise)
+- [simple Form](https://github.com/plataformatec/simple_form)
+- [cancancan](https://github.com/CanCanCommunity/cancancan)
+- [rolify](https://github.com/RolifyCommunity/rolify)
+- [bootstrap-Sass (Bootstrap v3)](https://github.com/twbs/bootstrap-sass)
+- [font-awesome-sass](https://github.com/FortAwesome/font-awesome-sass)
+- rails_12factor in a production group (for Heroku).
 
 ## Customizations
 
@@ -36,7 +36,7 @@ A devise layout has been created in `app/views/layouts` that puts the devise vie
 Simple_form is installed with the --bootstrap flag
 Browser validations config setting has been set to true in `config/initializers/simple_form.rb:120`
 
-config.browser_validations = true
+`config.browser_validations = true`
 
 ### Cancancan
 
@@ -50,6 +50,6 @@ Version 3 of Bootstrap is installed through the bootstrap-sass gem.
 A navbar partial is located in `app/views/shared`.
 A fading alerts partial is located in `app/views/shared`.
 
-## Navbar
+### Navbar
 
-The navbar has Rails code to show a *Sign in* link when the user is not signed in. When the user is signed in, they will see a *Dropdown* menu and *Sign out* link.
+The navbar has Rails code to show a **Sign in** link when the user is not signed in. When the user is signed in, they will see a **Dropdown** menu and **Sign out** link.
