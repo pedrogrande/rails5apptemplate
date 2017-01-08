@@ -1,0 +1,30 @@
+<div class="blog-post">
+  <h2 class="blog-post-title">
+    <%= link_to article.title, article %>
+  </h2>
+
+
+    <div class="tags">
+      <% article.tags.each do |tag| %>
+        <%= link_to tag.name.capitalize, filtered_articles_path(tag: tag.name), class: 'btn btn-default btn-xs' %>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to 'EDIT', edit_article_path(article), class: 'btn btn-warning btn-xs' %>
+      <% end %>
+    </div>
+  
+  <p class="blog-post-meta">Published by <%= link_to @settings.author_name, about_path %> on <%= article.created_at.strftime("#{article.created_at.day.ordinalize} %B, %Y") %></p>
+
+  <p class="lead"><%= article.lead %></p>
+  <% unless current_page?(root_path) or current_page?(filtered_articles_path) %>
+    <% unless article.image.file.nil? %>
+      <%= image_tag(article.image_url(:standard), class: 'img-responsive img-thumbnail') %>
+      <hr>
+    <% end %>
+    <%= article.html_content.html_safe %>
+  <% else %>
+    <%= link_to 'More...', article %>
+  <% end %>
+
+
+</div>

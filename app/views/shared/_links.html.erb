@@ -1,0 +1,17 @@
+<div class="sidebar-module sidebar-module-inset">
+    <h4><i class="fa fa-link fa-fw"></i> Elsewhere</h4>
+    <ol class="list-unstyled">
+      <% unless @settings.github == "" %>
+        <li><i class="fa fa-github fa-fw fa-lg"></i> <%= link_to @settings.github, "http://github.com/" + @settings.github, target: '_blank' %></li>
+      <% end %>
+      <% unless @settings.twitter == "" %>
+        <li><i class="fa fa-twitter fa-fw fa-lg"></i> <%= link_to @settings.twitter, "http://twitter.com/" + @settings.twitter, target: '_blank' %></li>
+      <% end %>
+      <% unless @settings.linked_in == "" %>
+        <li><i class="fa fa-linkedin fa-fw fa-lg"></i> <%= link_to @settings.linked_in, "https://www.linkedin.com/in/" + @settings.linked_in, target: '_blank' %></li>
+      <% end %>
+      <% unless @settings.instagram == "" %>
+        <li><i class="fa fa-instagram fa-fw fa-lg"></i> <%= link_to @settings.instagram, "https://www.instagram.com/" + @settings.instagram, target: '_blank' %></li>
+      <% end %>
+    </ol>
+  </div>

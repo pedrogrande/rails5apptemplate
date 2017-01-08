@@ -1,0 +1,31 @@
+<h1>Articles <small><%= link_to 'New article', new_article_path %></small></h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Published</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.title, article %></td>
+        <td>
+          <% if article.published %>
+            <%= article.created_at.strftime('%d %b %y') %>
+          <% else %>
+            Draft
+          <% end %>
+        </td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= will_paginate @articles %>

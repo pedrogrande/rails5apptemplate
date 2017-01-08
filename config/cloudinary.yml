@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dfdvtok5h
+  api_key: '299493864216187'
+  api_secret: rT8i_q946gDxZbvGtt6mkL6n9pk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dfdvtok5h
+  api_key: '299493864216187'
+  api_secret: rT8i_q946gDxZbvGtt6mkL6n9pk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dfdvtok5h
+  api_key: '299493864216187'
+  api_secret: rT8i_q946gDxZbvGtt6mkL6n9pk
+  enhance_image_tag: true
+  static_image_support: false

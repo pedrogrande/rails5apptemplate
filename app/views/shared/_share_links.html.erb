@@ -1,0 +1,9 @@
+<div class="sidebar-module sidebar-module-inset">
+  <h4><i class="fa fa-share fa-fw"></i> Share</h4>
+  <ol class="list-unstyled">
+    <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F<%= @blog_host %>&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a></li>
+    <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2F<%= @blog_host %>&text=:%20http%3A%2F%2F<%= @blog_host %>&via=@<%= @settings.twitter %>" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><i class="fa fa-twitter-square fa-fw"></i> Twitter</a></li>
+    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F<%= @blog_host %>&title=&summary=&source=http%3A%2F%2F<%= @blog_host %>" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-linkedin-square fa-fw"></i> LinkedIn</a></li>
+    <li><a href="mailto:?subject=&body=:%20http%3A%2F%2F<%= @blog_host %>" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fa fa-envelope fa-fw"></i> Send email</a></li>
+  </ol>
+</div>

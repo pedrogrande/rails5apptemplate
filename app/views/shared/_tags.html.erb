@@ -1,0 +1,8 @@
+<div class="sidebar-module sidebar-module-inset">
+  <h4><i class="fa fa-tags fa-fw"></i> Tags</h4>
+  <ol class="list-unstyled">
+    <% @article_tags.each do |tag| %>
+      <li><%= link_to tag.name.capitalize, filtered_articles_path(tag: tag.name) %> (<%= tag.count %>)</li>
+    <% end %>
+  </ol>
+</div>

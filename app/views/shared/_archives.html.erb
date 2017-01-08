@@ -1,0 +1,8 @@
+<div class="sidebar-module sidebar-module-inset">
+    <h4><i class="fa fa-calendar fa-fw"></i> Archives</h4>
+    <ol class="list-unstyled">
+      <% @archives.each do |archive| %>
+        <li><%= link_to archive[0].strftime('%B %Y'), filtered_articles_path(archive: archive[0]) %></li>
+      <% end %>
+    </ol>
+  </div>

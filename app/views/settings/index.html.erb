@@ -1,0 +1,38 @@
+<h1>Settings</h1>
+
+<!-- <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul> -->
+<%= simple_form_for(@setting) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :blog_title %>
+    <%= f.input :subtitle %>
+    <%= f.input :author_name %>
+    <% if @setting.author_image.file.nil? %>
+      <%= image_tag 'user.png', class: 'img-thumbnail', width: '50px' %>
+    <% else %>
+      <%= image_tag @setting.author_image_url(:thumbnail), class: 'img-thumbnail' %>
+    <% end %>
+    <%= f.input :author_image %>
+    <%= f.input :contact_email, hint: "Leave blank if you don't want your email address displayed" %>
+    <%= f.input :about_lead, label: 'About author (Use markdown only)' %>
+    <h3>Sidebar options</h3>
+    <%= f.input :tags, label: 'Show tags' %>
+    <%= f.input :archives, label: 'Show archives' %>
+    <h4>Links</h4>
+    <%= f.input :github, label: 'Github username' %>
+    <%= f.input :twitter, label: 'Twitter username' %>
+    <%= f.input :linked_in, label: 'LinkedIn username (http://linkedin.com/in/USERNAME)' %>
+    <%= f.input :instagram, label: 'Instagram username' %>
+    <h3>Analytics</h3>
+    <%= f.input :google_analytics %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Save settings', class: 'btn btn-default' %>
+  </div>
+<% end %>

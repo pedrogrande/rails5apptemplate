@@ -1,0 +1,17 @@
+<%= simple_form_for(@article) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.input :lead %>
+    <%= f.input :image %>
+    <%= f.input :published %>
+    <%= f.input :slug %>
+    <%= f.input :tag_list %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

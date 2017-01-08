@@ -1,0 +1,16 @@
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item active" href="/"><%= @settings.blog_title %></a>
+      <a class="blog-nav-item" href="/about">About</a>
+      <% if user_signed_in? %>
+      <span class="pull-right">
+        <%= link_to 'New article', new_article_path, class: 'blog-nav-item' %>
+        <%= link_to 'All articles', articles_path, class: 'blog-nav-item' %>
+        <%= link_to 'Settings', settings_path, class: 'blog-nav-item' %>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'blog-nav-item' %>
+      </span>
+      <% end %>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<% if params[:tag] %>
+  <h2>Articles tagged with <%= params[:tag] %></h2>
+<% elsif params[:archive] %>
+  <h2>Articles from <%= (params[:archive]).to_date.strftime('%B %Y') %></h2>
+<% end %>
+<hr>
+<%= render @articles || 'shared/no_articles' %>
+<%= will_paginate @articles if @articles %>

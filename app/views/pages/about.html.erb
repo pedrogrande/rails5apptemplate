@@ -1,0 +1,4 @@
+<h1>About <%= @settings.author_name %></h1>
+<%= cl_image_tag @settings.author_image, class: 'img-responsive img-thumbnail' %>
+<hr>
+<%= @settings.about_lead.html_safe %>
