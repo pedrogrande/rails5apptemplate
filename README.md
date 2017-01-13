@@ -33,7 +33,8 @@ A devise layout has been created in `app/views/layouts` that puts the devise vie
 
 ### Simple_form
 
-Simple_form is installed with the --bootstrap flag
+Simple_form is installed with the --bootstrap flag.
+
 Browser validations config setting has been set to true in `config/initializers/simple_form.rb:120`
 
 `config.browser_validations = true`
